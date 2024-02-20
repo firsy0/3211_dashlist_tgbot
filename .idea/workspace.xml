@@ -35,9 +35,14 @@
   "keyToString": {
     "Python.main.executor": "Run",
     "Python.proj02.executor": "Run",
+    "Python.proj04.executor": "Run",
+    "Python.projclass03.executor": "Run",
+    "Python.projclass04.executor": "Run",
+    "Python.projclass05.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Admin/pidor_pidor_drochilniy_club"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -57,5 +62,16 @@
       <updated>1706020688992</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
