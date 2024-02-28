@@ -19,12 +19,13 @@ TOKEN = "6499148020:AAHr3gN8wbSRlgpeeK0vDHifM5OVpMQT-40"
 bot = Bot(TOKEN, parse_mode=ParseMode.HTML)
 # All handlers should be attached to the Router (or Dispatcher)
 dp = Dispatcher()
+
 def r_main_menu():
     main_menu = ReplyKeyboardMarkup(keyboard=[
         [
-            KeyboardButton(text="News"), KeyboardButton(text="Lists")
+            KeyboardButton(text="🗞 News"), KeyboardButton(text="📋 Lists")
         ], [
-            KeyboardButton(text="About Us")
+            KeyboardButton(text="🌐 Contact")
     ]],
     resize_keyboard=True
     )
@@ -41,16 +42,28 @@ def r_lists():
     )
     return lists
 
-def r_aboutus():
-    about_us = ReplyKeyboardMarkup(keyboard=[
+
+
+newsList = ["Tidal Wave got rated!",
+            "2.2 update release",
+            "Tidal Wave is verified",
+            "❌",
+            "❌",
+            "❌"]
+
+def r_news():
+    news = ReplyKeyboardMarkup(keyboard=[
         [
-            KeyboardButton(text="GitHub🌐"), KeyboardButton(text="Telegram🌐"), KeyboardButton(text="Discord🌐")
+            KeyboardButton(text="1️⃣ - " + newsList[0]), KeyboardButton(text="2️⃣ - " + newsList[1]), KeyboardButton(text="3️⃣ - " + newsList[2]),
+        ], [
+            KeyboardButton(text="4️⃣ - " + newsList[3]), KeyboardButton(text="5️⃣ - " + newsList[4]), KeyboardButton(text="6️⃣ - " + newsList[5]),
         ], [
             KeyboardButton(text="Go back")
         ]],
-    resize_keyboard=True
+        resize_keyboard=True
     )
-    return about_us
+    return news
+
 def r_vlist():
     vlist = InlineKeyboardMarkup(inline_keyboard=[
         [
@@ -65,8 +78,8 @@ async def process_callback(callback_query: types.CallbackQuery):
     data = callback_query.data
     chat_id = callback_query.from_user.id
     if data == "vlist_show":
-        
-        print("VList were successfully showed to", chat_id)
+        await bot.send_message(chat_id,"Showing Verified List...")
+        print("|✅| VList ->", chat_id)
 
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
@@ -76,29 +89,48 @@ async def command_start_handler(message: Message) -> None:
 async def echo_handler(message: types.Message) -> None:
     try:
         await message.send_copy(chat_id=message.chat.id)
-        if message.text == "Lists":
+        if message.text == "📋 Lists":
             time.sleep(0.3)
-            await message.answer("There is 3 lists in this bot:\n\nVerified list\n\nSilent list\n\nChallenge list\n")
+            await message.answer(f"{hbold('Lists')}")
+            await message.answer("🔎There are 3 lists in this bot:\n\n📋 Verified list\n\n📋 Silent list\n\n📋 Challenge list\n")
             time.sleep(0.3)
-            await message.answer("Which one you want to open?", reply_markup=r_lists())
+            await message.answer("Which one are you want to open?", reply_markup=r_lists())
 
         elif message.text == "Verified List":
-            await message.answer("❔ What is Verified list?\n\nVerified list shows the 20 hardest levels over 1 minute that are rated or can be rated by RobTop. \n\n❔ Why is this list needed?\n\nThe current highest difficulty rating (Extreme Demon) is not enough, because the skill of the players has gone beyond this difficulty. That's why this list is needed so that players understand which levels are in the 20 most difficult and can compare them.\n\n❔ How did you determine the positions of the levels in the list?\n\nThe position of a level in the list is affected by its length and complexity.", reply_markup=r_vlist())
-        elif message.text == "Show VL in bot":
+            await message.answer(f"{hbold('Verified List')}""❔ What is Verified list?\n\nVerified list shows the 20 hardest levels over 1 minute that are rated or can be rated by RobTop. \n\n❔ Why is this list needed?\n\nThe current highest difficulty rating (Extreme Demon) is not enough, because the skill of the players has gone beyond this difficulty. That's why this list is needed so that players understand which levels are in the 20 most difficult and can compare them.\n\n❔ How did you determine the positions of the levels in the list?\n\nThe position of a level in the list is affected by its length and complexity.", reply_markup=r_vlist())
+
+        elif message.text == "🗞 News":
+            await message.answer("📰 Showing last 6 posts..", reply_markup=r_news())
+                    # Posts #
+        # 1
+        elif newsList[0] in message.text:
             await message.answer("1")
+        # 2
+        elif newsList[1] in message.text:
+            await message.answer("1")
+        # 3
+        elif newsList[2] in message.text:
+            await message.answer("1")
+        # 4
+        elif newsList[3] in message.text:
+            await message.answer("There is no post")
+        # 5
+        elif newsList[4] in message.text:
+            await message.answer("There is no post")
+        # 6
+        elif newsList[5] in message.text:
+            await message.answer("There is no post")
 
-        elif message.text == "News":
-            await message.answer("You are in the settings", reply_markup=r_lists())
+        elif message.text == "🌐 Contact":
+            await message.answer("💬You can contact the author of the bot in these ways:\n\n" f"{hlink('🔗Telegram', 'https://t.me/firsy0')}\n" "💬Discord (firsy#8192)\n" f"{hlink('🔗GitHub', 'https://github.com/firsy0')}")
 
-        elif message.text == "About Us":
-            await message.answer("If you want to contact me", reply_markup=r_aboutus())
-
-        elif message.text == "GitHub🌐":
-            await message.answer(f"GitHub links:\n\n{hlink('Profile🐍', 'https://github.com/firsy0')}\n{hlink('Repository🐍', 'https://github.com/firsy0/3211-dashlist')}")
-        elif message.text == "Telegram🌐":
-            await message.answer("Telegram:\n\n@firsy0")
         elif message.text == "Go back":
-            await message.answer("You are in the main menu", reply_markup=r_main_menu())
+            await message.answer("⬅️ You are in the main menu", reply_markup=r_main_menu())
+
+        elif message.text == "1488":
+            await message.answer("Ооооо, ето ше пасхалкооо😁😁😁😁😁😁😏😏😏😏😏😏😏")
+            await message.answer("Включаите вентилятари!😏😏😏😏😏😏😏😏")
+            print("Омагад ", message.from_user.full_name, " нашол пасхалкоооооооо!!!!")
 
     except TypeError:
         print("Error")
