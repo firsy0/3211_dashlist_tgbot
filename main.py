@@ -166,9 +166,9 @@ def r_vlist_sc():
 def r_vlist1_5():
     vlist1_5 = InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton(text="1. " + vl_name[1], callback_data="vl1")],[
-            InlineKeyboardButton(text="2. " + vl_name[2], callback_data="vl2")],[
-            InlineKeyboardButton(text="3. " + vl_name[3], callback_data="vl3")],[
+            InlineKeyboardButton(text="1. " + vl_name[1] + " 🥇", callback_data="vl1")],[
+            InlineKeyboardButton(text="2. " + vl_name[2] + " 🥈", callback_data="vl2")],[
+            InlineKeyboardButton(text="3. " + vl_name[3] + " 🥉", callback_data="vl3")],[
             InlineKeyboardButton(text="4. " + vl_name[4], callback_data="vl4")],[
             InlineKeyboardButton(text="5. " + vl_name[5], callback_data="vl5")],[
             InlineKeyboardButton(text="▶️", callback_data="vlgoto6_10")]
@@ -238,11 +238,11 @@ async def process_callback(callback_query: types.CallbackQuery):
         await bot.send_message(chat_id, "Verified List (16 to 20 of 20)", reply_markup=r_vlist16_20())
 
     elif data == "vl1":
-        await bot.send_message(chat_id, "1. " + vl_name[1] + "\n\nInformation about level: \n\nHosted by: " + vl_host[1] + "\nVerified by: " + vl_verify[1] + "\nIn-game ID: " + vl_id[1])
+        await bot.send_message(chat_id, "1. " + vl_name[1] + " 🥇\n\nInformation about level: \n\nHosted by: " + vl_host[1] + "\nVerified by: " + vl_verify[1] + " 💪\nIn-game ID: " + vl_id[1])
     elif data == "vl2":
-        await bot.send_message(chat_id, "2. " + vl_name[2] + "\n\nInformation about level: \n\nHosted by: " + vl_host[2] + "\nVerified by: " + vl_verify[2] + "\nIn-game ID: " + vl_id[2])
+        await bot.send_message(chat_id, "2. " + vl_name[2] + " 🥈\n\nInformation about level: \n\nHosted by: " + vl_host[2] + "\nVerified by: " + vl_verify[2] + " 💪\nIn-game ID: " + vl_id[2])
     elif data == "vl3":
-        await bot.send_message(chat_id, "3. " + vl_name[3] + "\n\nInformation about level: \n\nHosted by: " + vl_host[3] + "\nVerified by: " + vl_verify[3] + "\nIn-game ID: " + vl_id[3])
+        await bot.send_message(chat_id, "3. " + vl_name[3] + " 🥉\n\nInformation about level: \n\nHosted by: " + vl_host[3] + "\nVerified by: " + vl_verify[3] + " 💪\nIn-game ID: " + vl_id[3])
     elif data == "vl4":
         await bot.send_message(chat_id, "4. " + vl_name[4] + "\n\nInformation about level: \n\nHosted by: " + vl_host[4] + "\nVerified by: " + vl_verify[4] + "\nIn-game ID: " + vl_id[4])
     elif data == "vl5":
@@ -258,7 +258,7 @@ async def process_callback(callback_query: types.CallbackQuery):
     elif data == "vl10":
         await bot.send_message(chat_id, "10. " + vl_name[10] + "\n\nInformation about level: \n\nHosted by: " + vl_host[10] + "\nVerified by: " + vl_verify[10] + "\nIn-game ID: " + vl_id[10])
     elif data == "vl11":
-        await bot.send_message(chat_id, "11. " + vl_name[11] + "\n\nInformation about level: \n\nHosted by: " + vl_host[11] + "\nVerified by: " + vl_verify[11] + "\nIn-game ID: " + vl_id[11])
+        await bot.send_message(chat_id, "11. " + vl_name[11] + "\n\nInformation about level: \n\nHosted by: " + vl_host[11] + "\nVerified by: " + vl_verify[11] + " 💪\nIn-game ID: " + vl_id[11])
     elif data == "vl12":
         await bot.send_message(chat_id, "12. " + vl_name[12] + "\n\nInformation about level: \n\nHosted by: " + vl_host[12] + "\nVerified by: " + vl_verify[12] + "\nIn-game ID: " + vl_id[12])
     elif data == "vl13":
