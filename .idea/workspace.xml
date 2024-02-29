@@ -34,24 +34,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proj02.executor&quot;: &quot;Run&quot;,
-    &quot;Python.proj04.executor&quot;: &quot;Run&quot;,
-    &quot;Python.projclass03.executor&quot;: &quot;Run&quot;,
-    &quot;Python.projclass04.executor&quot;: &quot;Run&quot;,
-    &quot;Python.projclass05.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/pidor_pidor_drochilniy_club&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python..executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.proj02.executor": "Run",
+    "Python.proj04.executor": "Run",
+    "Python.projclass03.executor": "Run",
+    "Python.projclass04.executor": "Run",
+    "Python.projclass05.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/firsy/OneDrive/Документы/GitHub/3211_dashlist_tgbot",
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false">
+      <module name="3211_dashlist_tgbot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\firsy\OneDrive\Документы\GitHub\3211_dashlist_tgbot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="false" />
+      <option name="ADD_SOURCE_ROOTS" value="false" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/python-3.12.2-amd64.exe" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
       </set>
     </attachedChunks>
   </component>
